@@ -10,7 +10,6 @@ import gameOverImg from "./assets/gameover.png";
 import wingSound from "./assets/wing.wav";
 import hitSound from "./assets/hit.wav";
 import dieSound from "./assets/die.wav";
-import pointSound from "./assets/point.wav";
 
 const config = {
   type: Phaser.AUTO,
@@ -51,7 +50,6 @@ function preload() {
   this.load.audio('wing', [wingSound]);
   this.load.audio('hit', [hitSound]);
   this.load.audio('die', [dieSound]);
-  this.load.audio('point', [pointSound]);
 }
 
 function create() {
@@ -92,9 +90,8 @@ function create() {
   this.wing = this.sound.add("wing");
   this.hit = this.sound.add("hit");
   this.die = this.sound.add("die");
-  this.point = this.sound.add("point");
 
-  this.score = this.add.text(0, 0, 'Points: 0', { fontFamily: 'Arial', fontSize: 32, color: '#ffffff' });
+  this.score = this.add.text(0, 0, 'Natty points: 0', { fontFamily: 'Arial', fontSize: 32, color: '#ffffff' });
   this.score.setDepth(110);
   this.points = 0;
   this.messasge = this.add.sprite(config.width / 2, config.height / 2, "message");
@@ -149,8 +146,7 @@ function addPipe() {
     this.points++;
     let realPoints = this.points - 3;
     if (realPoints > 0) {
-      this.score.setText("Points: " + realPoints)
-      this.point.play();
+      this.score.setText("Calories: " + realPoints)
     }
   }
 }
