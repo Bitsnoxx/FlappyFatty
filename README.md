@@ -6,7 +6,7 @@ A clone of Flappy Bird using Phaser 3, this project have been made to do introdu
 
 ## Running demo
 
-To play the game just visit the url: https://learningbyexample.github.io/flapybird-phaser3/dist/
+To play the game just visit the url: https://bitsnoxx.github.io/FlappyFatty/dist/
 
 ## Reference projects:
 
